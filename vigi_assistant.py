@@ -64,7 +64,7 @@ if __name__=='__main__':
             webbrowser.open("youtube.com")
 
         elif "sleep" in query:
-            speak("Ok sir, i am signing out")
+            speak("Ok sir, i am signing out and this is edited in github")
             exit()
             
 
