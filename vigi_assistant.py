@@ -49,6 +49,7 @@ def greet():
 
 
 if __name__=='__main__':
+    speak("hello mr parmod")
     while True:
         query=command().lower()
 
