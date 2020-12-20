@@ -6,7 +6,7 @@ import wikipedia
 import webbrowser
 import mysql.connector
 import pandas as pd
-
+from recruitment import *
 
 engine=pyttsx3.init('sapi5')
 voice=engine.getProperty('voices')
@@ -108,7 +108,7 @@ def csv_operations():                   #read csv function
 
 if __name__=='__main__':
     # speak("hello mr parmod")
-    csv_operations()
+    # csv_operations()
     # data_base()
     # while True:
     #     query=command().lower()
@@ -127,6 +127,9 @@ if __name__=='__main__':
     #     elif "sleep" in query:
     #         speak("Ok sir, i am signing out and this is edited in github")
     #         exit()
+
+    # wordd=abc()
+    # speak(wordd)
             
 
 
