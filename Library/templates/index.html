@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Home
+{% endblock title %}
+{% block body %}
+
+<div class="container">
+<h1>Add Books</h1>
+<form method="POST" action="" id="libraryform">
+{% csrf_token %}
+<div id="message"></div>
+  <div class="mb-3">
+    <b><label for="bookname" class="form-label">Name Of Book</label></b>
+    <input type="text" class="form-control" id="bookname" aria-describedby="emailHelp" name="bookname">
+  
+  <div class="mb-3">
+    <b><label for="author" class="form-label">Author</label></b>
+    <input type="text" class="form-control" id="author" name="author">
+  </div>
+   <div class="mb-3">
+    <b><label for="type" class="form-label">Type</label></b>
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="booktype" id="fiction" value="fiction" checked>
+  <label class="form-check-label" for="fiction">
+    Fiction
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="booktype" id="programming" value="programming">
+  <label class="form-check-label" for="programming">
+    Programming
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="booktype" id="cooking"  value="cooking">
+  <label class="form-check-label" for="cooking">
+    Cooking
+  </label>
+</div>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Add Book</button>
+  </form>
+  <div class="container">
+  <h1>Recentally Added Books</h1>
+<table class="table">
+  <thead>
+    <tr>
+     
+      <th scope="col">Book Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Book Type</th>
+    </tr>
+  </thead>
+  <tbody id="tablebody">
+   
+    
+  </tbody>
+</table>
+</div>
+
+</div>
+
+<script src="static/index.js"></script>
+{% endblock body %}
