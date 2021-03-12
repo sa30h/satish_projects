@@ -1,0 +1,14 @@
+{% extends 'user/base.html' %}
+{% block content %}
+<form action="" method="POST">
+{% csrf_token %}
+{% for form in form  %}
+
+{{form.label_tag}}
+{{form}}
+{{form.error | striptags}}
+
+{% endfor %}
+<input type="submit">
+</form>
+{% endblock content %}

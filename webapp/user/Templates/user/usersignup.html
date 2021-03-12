@@ -1,0 +1,32 @@
+{% extends 'user/base.html' %}
+{% block title %}User SignUp{% endblock title %}
+{% block content %}
+<style>
+label{
+    font-size:20px;
+    padding:5px;
+}
+input{
+
+    width:100%;
+    padding:5px;
+    margin:3px;
+}
+</style>
+<div class="container-fluid">
+<h1>Sign Up </h1>
+<form action="" method="POST" novalidate >
+{% csrf_token %}
+{% for form in  form%}
+
+{{form.label_tag}}
+{{form}}
+{{form.errors }}
+{% endfor %}
+
+<input type="submit" value="SignUp" class="btn btn-outline-success">
+</form>
+
+
+</div>
+{% endblock content %}riptags
